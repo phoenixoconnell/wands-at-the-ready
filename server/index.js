@@ -4,10 +4,12 @@ const express = require('express');
 const app = express();
 const massive = require('massive');
 const session = require('express-session');
+const auth = require('./middleware/userMiddleware');
 
 //controllers
 const { register, login, logout } = require('./controllers/authController');
 const { getAllProducts, getOneProduct, add, edit, deleteProduct } = require('./controllers/productController');
+const { getCart, addToCart, removeFromCart, clearCart } = require('./controllers/cartController');
 
 //dotenv
 const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
@@ -40,14 +42,19 @@ app.post('/auth/login', login);
 app.post('/auth/logout', logout);
 
 //admin
-app.post('/admin/add', add);
-app.put('/admin/edit/:product_id', edit);
-app.delete('/admin/delete/:product_id', deleteProduct)
+app.post('/admin/add', auth.usersOnly, auth.adminsOnly, add);
+app.put('/admin/edit/:product_id', auth.usersOnly, auth.adminsOnly, edit);
+app.delete('/admin/delete/:product_id', auth.usersOnly, auth.adminsOnly, deleteProduct)
 
 //products
-app.get('/api/products', getAllProducts);
-app.get('/api/products/:product_id', getOneProduct);
+app.get('/api/products', auth.usersOnly, getAllProducts);
+app.get('/api/products/:product_id', auth.usersOnly, getOneProduct);
 
+//cart
+app.get('/cart/products', auth.usersOnly, getCart);
+app.post('/cart/add/:product_id', auth.usersOnly, addToCart);
+app.delete('/cart/delete/:product_id', auth.usersOnly, removeFromCart);
+app.delete('/cart/clear', auth.usersOnly, clearCart);
 
 //listen
 app.listen(SERVER_PORT, () => {
