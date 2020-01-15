@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import './Product.css';
+import './Landing.css';
 
-export default class Product extends Component {
+export default class Landing extends Component {
     render() {
         return (
             <div>
-                product.js
+                landing.js
             </div>
         )
     }
