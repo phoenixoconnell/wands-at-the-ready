@@ -17,7 +17,7 @@ const register = async (req, res) => {
         req.session.user = {
             user_id: newUser[0].user_id,
             username: newUser[0].username,
-            isAdmin: newUser[0].isAdmin
+            isAdmin: newUser[0].isadmin
         }
         res.status(200).json(req.session.user);
     }
@@ -40,7 +40,7 @@ const login = async (req, res) => {
             req.session.user = {
                 user_id: existingUser[0].user_id,
                 username: existingUser[0].username,
-                isAdmin: existingUser[0].isAdmin
+                isAdmin: existingUser[0].isadmin
             }
             res.status(200).json(req.session.user)
         }
