@@ -9,7 +9,7 @@ const auth = require('./middleware/userMiddleware');
 //controllers
 const { register, login, logout } = require('./controllers/authController');
 const { getAllProducts, getOneProduct, add, edit, deleteProduct } = require('./controllers/productController');
-const { getCart, addToCart, removeFromCart, clearCart } = require('./controllers/cartController');
+const { cartCount, getCart, addToCart, removeFromCart, clearCart } = require('./controllers/cartController');
 
 //dotenv
 const { SERVER_PORT, DB_STRING, SESSION_SECRET } = process.env;
@@ -51,6 +51,7 @@ app.get('/api/products', auth.usersOnly, getAllProducts);
 app.get('/api/products/:product_id', auth.usersOnly, getOneProduct);
 
 //cart
+app.get('/cart/count', auth.usersOnly, cartCount);
 app.get('/cart/products', auth.usersOnly, getCart);
 app.post('/cart/add/:product_id', auth.usersOnly, addToCart);
 app.delete('/cart/delete/:product_id', auth.usersOnly, removeFromCart);

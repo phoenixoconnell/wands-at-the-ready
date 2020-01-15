@@ -30,7 +30,15 @@ const clearCart = async (req, res) => {
     res.sendStatus(200);
 }
 
+const cartCount = async (req, res) => {
+    const db = req.app.get('db');
+
+    const count = await db.cartCount(req.session.user.user_id);
+    res.status(200).json(count);
+}
+
 module.exports = {
+    cartCount,
     getCart,
     addToCart,
     removeFromCart,
