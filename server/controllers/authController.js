@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs');
 const register = async (req, res) => {
     const db = req.app.get('db');
     const { username, password, isAdmin } = req.body;
+    console.log(username, password, isAdmin)
 
     const existingUser = await db.checkForUser(username);
 
@@ -26,8 +27,10 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     const db = req.app.get('db');
     const { username, password } = req.body;
+    // console.log(username, password)
 
     const existingUser = await db.checkForUser(username);
+    // console.log(existingUser)
 
     if(!existingUser[0]){
         res.status(403).json('Please create an account')
@@ -42,6 +45,7 @@ const login = async (req, res) => {
                 username: existingUser[0].username,
                 isAdmin: existingUser[0].isadmin
             }
+            console.log(req.session.user)
             res.status(200).json(req.session.user)
         }
     }

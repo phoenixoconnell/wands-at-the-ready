@@ -4,7 +4,8 @@ import axios from 'axios';
 const initialState = {
     user_id: null,
     username: '',
-    isAdmin: false
+    isAdmin: false,
+    error: ''
 }
 
 //const strings
@@ -13,19 +14,15 @@ export const LOGIN_USER = 'LOGIN_USER'
 export const LOGOUT_USER = 'LOGOUT_USER'
 
 //functions
-export function register(username, password, isAdmin){
-    const user = {
-        username,
-        password,
-        isAdmin
-    }
+export function register(user){
     return {
         type: REGISTER_USER,
-        payload: axios.post('/auth/register')
+        payload: axios.post('/auth/register', user)
     }
 }
 
 export function login(user){
+    console.log(user)
     return {
         type: LOGIN_USER,
         payload: axios.post('/auth/login', user)
@@ -48,14 +45,23 @@ export default function reducer(state = initialState, action){
                 ...state,
                 user_id: payload.data.user_id,
                 username: payload.data.username,
-                isAdmin: payload.data.isAdmin
+                isAdmin: payload.data.isAdmin,
+                error: ''
+            }
+        case `${LOGIN_USER}_REJECTED`:    
+        case `${REGISTER_USER}_REJECTED`:
+            return {
+                ...state,
+                error: 'Please enter a valid username and password'
             }
         case `${LOGIN_USER}_FULFILLED`:
+            console.log(payload)
             return {
                 ...state,
                 user_id: payload.data.user_id,
                 username: payload.data.username,
-                isAdmin: payload.data.isAdmin
+                isAdmin: payload.data.isAdmin,
+                error: ''
             }
         case `${LOGOUT_USER}_FULFILLED`:
             return {
