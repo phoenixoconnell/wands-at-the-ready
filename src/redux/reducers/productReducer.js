@@ -31,7 +31,7 @@ export function getProduct(product_id){
 export function addProduct(product){
     return {
         type: ADD_PRODUCT,
-        payload: axios.post('/admin/add')
+        payload: axios.post('/admin/add', product)
     }
 }
 

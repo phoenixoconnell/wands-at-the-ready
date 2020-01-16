@@ -25,11 +25,7 @@ export function register(username, password, isAdmin){
     }
 }
 
-export function login(username, password){
-    const user = {
-        username,
-        password
-    }
+export function login(user){
     return {
         type: LOGIN_USER,
         payload: axios.post('/auth/login', user)
