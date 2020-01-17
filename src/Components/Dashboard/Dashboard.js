@@ -2,16 +2,25 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Add from '../Add/Add';
 import { logout } from '../../redux/reducers/userReducer';
+import { getProducts } from '../../redux/reducers/productReducer';
 import './Dashboard.css';
 import Products from '../Products/Products';
 import { Link, withRouter } from 'react-router-dom';
 
 class Dashboard extends Component {
     
-    componentDidMount() {
-        if(!this.props.user_id) {
-            // alert('Please enter a valid username and password')
-            this.props.history.push('/')
+    // componentDidMount() {
+    //     // console.log(this.props.user_id)
+    //     // if(!this.props.user_id) {
+    //     //     // alert('Please enter a valid username and password')
+    //     //     this.props.history.push('/')
+    //     // }
+    //     // this.props.getProducts()
+    // }
+
+    componentDidUpdate() {
+        if(this.props.user_id) {
+            this.props.getProducts()
         }
     }
 
@@ -25,8 +34,7 @@ class Dashboard extends Component {
                 {this.props.isAdmin ? 
                     (
                         <div>
-                            <button>Add Product</button>
-                            <button>Edit Product</button>
+                            <Link to='/dashboard/add'><button>Add Product</button></Link>
                         </div>
                     )
                 :
@@ -49,5 +57,6 @@ const mapStateToProps = reduxState => {
 }
 
 export default connect(mapStateToProps, {
-    logout
+    logout,
+    getProducts
 })(withRouter(Dashboard))

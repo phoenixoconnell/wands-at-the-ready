@@ -15,14 +15,14 @@ class Landing extends Component {
         }
     }
 
-    componentDidUpdate(prevProps){
+    // componentDidUpdate(prevProps){
         // console.log(this.props)
         // if(this.props.loginError != '' && prevProps.loginError != this.props.loginError) {
         //     this.props.history.push('/dashboard')
         // } else {
         //     alert(this.props.loginError)
         // }
-    }
+    // }
 
     handleInputChange = e => {
         console.log(e.target.value)
