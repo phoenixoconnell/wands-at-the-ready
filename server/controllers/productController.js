@@ -34,8 +34,8 @@ const deleteProduct = async (req, res) => {
     const db = req.app.get('db');
     const { product_id } = req.params;
 
-    const deletedItem = await db.deleteProduct(product_id);
-    res.status(200).json(deletedItem);
+    const products = await db.deleteProduct(product_id);
+    res.status(200).json(products);
 }
 
 module.exports= {

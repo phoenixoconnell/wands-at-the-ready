@@ -3,7 +3,8 @@ import axios from 'axios';
 //initial state
 const initialState = {
     products: [],
-    product: {}
+    product: {},
+    loading: false
 }
 
 //const strings
@@ -78,8 +79,14 @@ export default function reducer(state = initialState, action){
         case `${DELETE_PRODUCT}_FULFILLED`:
             return {
                 ...state,
-                products: payload.data
-            }    
+                products: payload.data,
+                loading: false
+            } 
+        case `${DELETE_PRODUCT}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            }       
         default: return state    
     }
 }
