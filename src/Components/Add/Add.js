@@ -21,6 +21,20 @@ class Add extends Component {
         })
     }
 
+    clear = () => {
+        this.setState({
+            product_name: '',
+            product_img: '',
+            product_price: 0,
+            product_desc: ''
+        })
+    }
+
+    submit = product => {
+        this.props.addProduct(product)
+        this.clear()
+    }
+
     render() {
         let product = {
             product_name: this.state.product_name,
@@ -35,7 +49,10 @@ class Add extends Component {
                 <input name='product_img' placeholder='Product Image' onChange={this.handleInputChange} />
                 <input name='product_price' placeholder='Product Price' onChange={this.handleInputChange} />
                 <input name='product_desc' placeholder='Product Description' onChange={this.handleInputChange} />
-                <Link to='/dashboard'><button onClick={() => this.props.addProduct(product)}>Add Product</button></Link>
+                <div>
+                    <Link to='/dashboard'><button onClick={() => this.submit(product)}>Add Product</button></Link>
+                    <Link to='/dashboard'><button onClick={this.clear}>Cancel</button></Link>
+                </div>
             </div>
         )
     }

@@ -13,6 +13,7 @@ export const GET_PRODUCT = 'GET_PRODUCT'
 export const ADD_PRODUCT = 'ADD_PRODUCT'
 export const EDIT_PRODUCT = 'EDIT_PRODUCT'
 export const DELETE_PRODUCT = 'DELETE_PRODUCT'
+export const SET_PRODUCT = 'SET_PRODUCT'
 
 //functions
 export function getProducts(){
@@ -47,6 +48,13 @@ export function deleteProduct(product_id){
     return {
         type: DELETE_PRODUCT,
         payload: axios.delete(`/admin/delete/${product_id}`)
+    }
+}
+
+export function setProduct(product_id){
+    return {
+        type: SET_PRODUCT,
+        payload: axios.get(`/api/products/${product_id}`)
     }
 }
 
@@ -86,7 +94,12 @@ export default function reducer(state = initialState, action){
             return {
                 ...state,
                 loading: true
-            }       
+            }  
+        case `${SET_PRODUCT}_FULFILLED`:
+            return {
+                ...state,
+                product: payload.data
+            }     
         default: return state    
     }
 }

@@ -1,7 +1,10 @@
 .App {
   text-align: center;
   background-color: rgb(199, 148, 199);
-  height: 100vh;
+  height: 100%;
   width: 100vw;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 

@@ -54,7 +54,10 @@ class Edit extends Component {
                 <input name='product_img' onChange={this.handleInputChange} value={this.state.product_img} />
                 <input name='product_price' onChange={this.handleInputChange} value={this.state.product_price} />
                 <input name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
-                <Link to='/dashboard'><button onClick={() => this.props.editProduct(product)}>Edit Product</button></Link>
+                <div>
+                    <Link to='/dashboard'><button onClick={() => this.props.editProduct(product)}>Edit Product</button></Link>
+                    <Link to='/dashboard'><button>Cancel</button></Link>
+                </div>
             </div>
         )
     }
