@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'lumos';
+    src: url('../../LUMOS.TTF') format('truetype'), url('../../LUMOS.woff') format('woff');
+}
+
+$font-stack: lumos;
+
+.product-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font: 100% $font-stack;
+}
+
+.normal-text{
+    font-family: serif;
+}
+
+.product-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.product-buttons button{
+    font: 100% $font-stack;
+    font-size: large;
+}
