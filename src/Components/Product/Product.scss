@@ -20,9 +20,14 @@ $font-stack: lumos;
     display: flex;
     justify-content: space-around;
     width: 40%;
+
+        button {
+            font: 100% $font-stack;
+            font-size: large; 
+        }
 }
 
-.product-buttons button{
-    font: 100% $font-stack;
-    font-size: large;
-}
+// .product-buttons button{
+//     font: 100% $font-stack;
+//     font-size: large;
+// }

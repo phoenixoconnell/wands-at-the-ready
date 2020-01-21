@@ -30,7 +30,7 @@ class Products extends Component {
                                 </div>
                             </div>
                             </Link>
-                            <div className='product-buttons'>
+                            <div className='products-buttons'>
                                 {this.props.isAdmin ? <Link to={`/dashboard/edit/${e.product_id}`}><button>Edit</button></Link> : null} 
                                 <button onClick={() => this.add(e.product_id)}>Purchase</button>
                                 {this.props.isAdmin ? <button onClick={() => this.props.deleteProduct(e.product_id)}>Delete</button> : null}

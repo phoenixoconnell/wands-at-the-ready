@@ -47,7 +47,7 @@
           justify-content: space-evenly;
 }
 
-.product-buttons {
+.products-buttons {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +56,7 @@
   width: 100%;
 }
 
-.product-buttons button {
+.products-buttons button {
   margin: 10px;
   border-radius: 10px;
 }

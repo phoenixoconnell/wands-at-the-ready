@@ -1,6 +1,7 @@
 .products-container {
     display: flex;
     flex-wrap: wrap;
+    font: 100% $font-stack;
 }
 
 .card-container {
@@ -26,13 +27,13 @@
     justify-content: space-evenly;
 }
 
-.product-buttons {
+.products-buttons {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.product-buttons button {
+.products-buttons button {
     margin: 10px;
     border-radius: 10px;
 }

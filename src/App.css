@@ -1,10 +1,16 @@
+@font-face {
+  font-family: 'lumos';
+  src: url("./LUMOS.TTF") format("truetype"), url("./LUMOS.woff") format("woff");
+}
+
 .App {
   text-align: center;
-  background-color: rgb(199, 148, 199);
+  background-color: #c794c7;
   height: 100vh;
   width: 100vw;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   margin: 0px;
   padding: 0px;
 }
-
+/*# sourceMappingURL=App.css.map */
