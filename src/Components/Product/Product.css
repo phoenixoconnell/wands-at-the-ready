@@ -15,6 +15,10 @@
       -ms-flex-align: center;
           align-items: center;
   font: 100% lumos;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 .normal-text {
@@ -33,5 +37,15 @@
 .product-buttons button {
   font: 100% lumos;
   font-size: large;
+  border-radius: 5px;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.product-buttons button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
 }
 /*# sourceMappingURL=Product.css.map */

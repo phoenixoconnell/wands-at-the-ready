@@ -17,13 +17,14 @@ class Products extends Component {
             <div className='products-container'>
                 {this.props.isAdmin ? 
                     (
-                        <div>
+                        <div className='products-add-button'>
                             <Link to='/dashboard/add'><button>Add Product</button></Link>
                         </div>
                     )
                 :
                     null
                 }
+                <div className='products-products'>
                 {this.props.products.map(e => {
                     return (
                         <div key={e.product_id} className='card-container'>
@@ -47,6 +48,7 @@ class Products extends Component {
                         </div>
                     )
                 })}
+                </div>
             </div>
         )
     }

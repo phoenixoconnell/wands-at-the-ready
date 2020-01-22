@@ -5,7 +5,32 @@
 
 $font-stack: lumos;
 
+.products-add-button {
+        button {
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            font: 100% $font-stack;
+            font-size: 20px;
+            background-color: rgb(56, 34, 5);
+            border: 1px solid rgb(184, 155, 117);
+            color: rgb(184, 155, 117);
+        }
+
+        button:hover {
+            background-color: rgb(184, 155, 117);
+            border: 1px solid rgb(184, 155, 117);
+            color: rgb(56, 34, 5);
+        }
+}
+
 .products-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.products-products {
     display: flex;
     flex-wrap: wrap;
     font: 100% $font-stack;
@@ -16,7 +41,8 @@ $font-stack: lumos;
 }
 
 .card-container {
-    border: 2px solid rgb(85, 84, 84);
+    border: 2px solid rgb(56, 34, 5);
+    background-color: rgb(184, 155, 117);
     flex-direction: row;
     width: 300px;
     height: 350px;
@@ -46,7 +72,16 @@ $font-stack: lumos;
 
         button {
             margin: 10px;
-            border-radius: 10px;
+            border-radius: 5px;
             font: 100% $font-stack;
+            background-color: rgb(56, 34, 5);
+            border: 1px solid rgb(184, 155, 117);
+            color: rgb(184, 155, 117);
+        }
+
+        button:hover {
+            background-color: rgb(184, 155, 117);
+            border: 1px solid rgb(56, 34, 5);
+            color: rgb(56, 34, 5);
         }
 }

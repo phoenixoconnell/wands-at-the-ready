@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'lumos';
+  src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
+}
+
 .landing-container {
   height: 100%;
   width: 100%;
@@ -21,9 +26,14 @@
 
 .landing-admin {
   color: white;
+  font: 100% lumos;
+  font-size: 20px;
+  margin: 10px;
 }
 
 .landing-buttons button {
   border-radius: 5px;
+  font: 100% lumos;
+  margin: 5px;
 }
 /*# sourceMappingURL=Landing.css.map */

@@ -19,6 +19,7 @@ class Cart extends Component {
         return (
             <div>
                 <Link to='/dashboard'><button>Continue Shopping</button></Link>
+                <div className='cart-item-container'>
                 {this.props.cart.map((e, i) => {
                     return (
                         <div key={`${e.product_id}-${i}`} className='card-container'>
@@ -38,6 +39,7 @@ class Cart extends Component {
                         </div>
                     )
                 })}
+                </div>
                 <Link to='/dashboard'><button onClick={this.completePurchase}>{`Complete Your Purchase ($${this.props.cart.reduce((t, e) => t += e.product_price, 0)})`}</button></Link>
             </div>
         )

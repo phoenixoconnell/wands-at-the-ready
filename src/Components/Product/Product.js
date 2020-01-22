@@ -13,7 +13,7 @@ class Product extends Component {
             <div className='product-container'>
                 <Link to='/dashboard'><button className='back-button'>Back</button></Link>
                 <span>{this.props.product.product_name}</span>
-                <img src={this.props.product.product_img} alt='Product Image' style={{maxWidth: '500px'}}/>
+                <img src={this.props.product.product_img} alt='Product Image' style={{maxWidth: '400px'}}/>
                 <span><span className='normal-text'>$</span>{`${this.props.product.product_price}`}</span>
                 <span>{this.props.product.product_desc}</span>
                 <div className='product-buttons'>

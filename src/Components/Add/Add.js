@@ -43,8 +43,8 @@ class Add extends Component {
             product_desc: this.state.product_desc
         }
         return (
-            <div>
-                <h1>Add Product</h1>
+            <div className='add-container'>
+                <h1>Add New Product</h1>
                 <input name='product_name' placeholder='Product Name' onChange={this.handleInputChange} />
                 <input name='product_img' placeholder='Product Image' onChange={this.handleInputChange} />
                 <input name='product_price' placeholder='Product Price' onChange={this.handleInputChange} />
