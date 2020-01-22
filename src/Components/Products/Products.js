@@ -25,8 +25,8 @@ class Products extends Component {
                                 </div>
                                 <div className='product-info'>
                                     <span>{e.product_name}</span>
-                                    <span>{`$${e.product_price}`}</span>
-                                    <span>{e.product_desc}</span>
+                                    <span><span className='normal-text'>$</span>{`${e.product_price}`}</span>
+                                    {/* <span>{e.product_desc}</span> */}
                                 </div>
                             </div>
                             </Link>

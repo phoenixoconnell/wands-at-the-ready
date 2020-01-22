@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'lumos';
+    src: url('../../LUMOS.TTF') format('truetype'), url('../../LUMOS.woff') format('woff');
+}
+
+$font-stack: lumos;
+
+.dashboard-nav-container {
+    height: 125px;
+    background-color: rgb(80, 76, 76);
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+
+        button {
+            margin: 10px;
+            font-size: 20px;
+            border-radius: 5px;
+            font: 100% $font-stack;
+        }
+}

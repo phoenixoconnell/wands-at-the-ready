@@ -1,0 +1,24 @@
+@font-face {
+  font-family: 'lumos';
+  src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
+}
+
+.dashboard-nav-container {
+  height: 125px;
+  background-color: #504c4c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10px;
+}
+
+.dashboard-nav-container button {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  font: 100% lumos;
+}
+/*# sourceMappingURL=Dashboard.css.map */

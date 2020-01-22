@@ -50,17 +50,21 @@ class Landing extends Component {
             isAdmin: this.state.isAdmin
         }
         return (
-            <div className='container'>
+            <div className='landing-container'>
                 <section>
                     <img src={logo} alt='Wands at the Ready!'/>
                 </section>
-                <input name='username' placeholder='Username' onChange={this.handleInputChange}></input>
-                <input type='password' name='password' placeholder='Password' onChange={this.handleInputChange}></input>
-                <div>
+                <div className='landing-input'>
+                    <input name='username' placeholder='Username' onChange={this.handleInputChange}></input>
+                    <input type='password' name='password' placeholder='Password' onChange={this.handleInputChange}></input>
+                </div>
+                <div className='landing-admin'>
                     Admin<input type='checkbox' onChange={this.handleBoxClick} />
                 </div>
-                <Link to='/dashboard'><button onClick={() => this.props.login(auth)}>Login</button></Link>
-                <button onClick={() => this.props.register(register)}>Register</button>
+                <div className='landing-buttons'>
+                    <Link to='/dashboard'><button onClick={() => this.props.login(auth)}>Login</button></Link>
+                    <button onClick={() => this.props.register(register)}>Register</button>
+                </div>
             </div>
         )
     }

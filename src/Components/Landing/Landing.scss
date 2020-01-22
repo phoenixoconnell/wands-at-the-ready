@@ -1,0 +1,26 @@
+.landing-container {
+    height: 100%;
+    width: 100%;
+    background-image: url('../../diagonalley.jpg');
+    background-size: cover;
+}
+
+.landing-input {
+    display: flex;
+    justify-content: center;
+    
+        input {
+            border-radius: 5px;
+            margin: 0px 5px 0px;
+        }
+}
+
+.landing-admin {
+    color: white;
+}
+
+.landing-buttons {
+        button {
+            border-radius: 5px;
+        }
+}

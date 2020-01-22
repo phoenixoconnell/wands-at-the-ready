@@ -4,6 +4,7 @@ import Add from '../Add/Add';
 import { logout } from '../../redux/reducers/userReducer';
 import { getProducts } from '../../redux/reducers/productReducer';
 import { getCart } from '../../redux/reducers/cartReducer';
+import logo from '../../logo.png';
 import './Dashboard.css';
 import Products from '../Products/Products';
 import { Link, withRouter } from 'react-router-dom';
@@ -32,9 +33,9 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <div>
-                <section>
-                    <h1>Dashboard</h1>
+            <div className='dashboard-main-container'>
+                <section className='dashboard-nav-container'>
+                    <img src={logo} alt='Wands at the Ready' style={{maxWidth: '600px'}} />
                     <Link to='/'><button onClick={this.props.logout}>Logout</button></Link>
                     <Link to='/dashboard/cart'><button><i class="fas fa-shopping-cart"></i>({this.props.cart ? this.props.cart.length : 0})</button></Link>
                 </section>

@@ -1,9 +1,19 @@
+@font-face {
+  font-family: 'lumos';
+  src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
+}
+
 .products-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  font: 100% lumos;
+}
+
+.normal-text {
+  font-family: serif;
 }
 
 .card-container {
@@ -45,6 +55,7 @@
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  font-size: large;
 }
 
 .products-buttons {
@@ -59,5 +70,6 @@
 .products-buttons button {
   margin: 10px;
   border-radius: 10px;
+  font: 100% lumos;
 }
 /*# sourceMappingURL=Products.css.map */
