@@ -9,16 +9,19 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 10px;
 }
 
 .dashboard-nav-container button {
-  margin: 10px;
-  font-size: 20px;
-  border-radius: 5px;
   font: 100% lumos;
+  margin: 10px;
+  font-size: 30px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=Dashboard.css.map */

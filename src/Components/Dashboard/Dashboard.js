@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Add from '../Add/Add';
 import { logout } from '../../redux/reducers/userReducer';
 import { getProducts } from '../../redux/reducers/productReducer';
 import { getCart } from '../../redux/reducers/cartReducer';
 import logo from '../../logo.png';
 import './Dashboard.css';
+import { Link, withRouter, Switch, Route } from 'react-router-dom';
+import Add from '../Add/Add';
+import Cart from '../Cart/Cart';
+import Edit from '../Edit/Edit';
+import Product from '../Product/Product';
 import Products from '../Products/Products';
-import { Link, withRouter } from 'react-router-dom';
+import Routes from './routes';
 
 class Dashboard extends Component {
     
@@ -36,20 +40,19 @@ class Dashboard extends Component {
             <div className='dashboard-main-container'>
                 <section className='dashboard-nav-container'>
                     <img src={logo} alt='Wands at the Ready' style={{maxWidth: '600px'}} />
-                    <Link to='/'><button onClick={this.props.logout}>Logout</button></Link>
-                    <Link to='/dashboard/cart'><button><i class="fas fa-shopping-cart"></i>({this.props.cart ? this.props.cart.length : 0})</button></Link>
+                    <div>
+                        <Link to='/'><button onClick={this.props.logout}>Logout</button></Link>
+                        <Link to='/dashboard/cart'><button><i class="fas fa-shopping-cart"></i>({this.props.cart ? this.props.cart.length : 0})</button></Link>
+                    </div>
                 </section>
-                {this.props.isAdmin ? 
-                    (
-                        <div>
-                            <Link to='/dashboard/add'><button>Add Product</button></Link>
-                        </div>
-                    )
-                :
-                    null
-                }
                 <section>
-                    <Products />
+                <Switch>
+                    <Route exact path='/dashboard/add' component={Add} />
+                    <Route exact path='/dashboard/edit/:product_id' component={Edit} />
+                    <Route exact path='/dashboard/cart' component={Cart} />
+                    <Route exact path='/dashboard' component={Products} />
+                    <Route path='/dashboard/:product_id' component={Product} />
+                </Switch>
                 </section>
             </div>
         )

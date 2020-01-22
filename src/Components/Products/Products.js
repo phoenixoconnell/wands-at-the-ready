@@ -15,10 +15,19 @@ class Products extends Component {
     render() {
         return (
             <div className='products-container'>
+                {this.props.isAdmin ? 
+                    (
+                        <div>
+                            <Link to='/dashboard/add'><button>Add Product</button></Link>
+                        </div>
+                    )
+                :
+                    null
+                }
                 {this.props.products.map(e => {
                     return (
                         <div key={e.product_id} className='card-container'>
-                            <Link to={`/dashboard/products/${e.product_id}`}>
+                            <Link to={`/dashboard/${e.product_id}`}>
                             <div>
                                 <div className='product-image'>
                                     <img src={e.product_img} alt='Product Image' style={{maxWidth: '200px'}} />
