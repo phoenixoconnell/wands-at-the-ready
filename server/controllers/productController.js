@@ -2,7 +2,7 @@ const getAllProducts = async (req, res) => {
     const db = req.app.get('db');
 
     const allProducts = await db.getAllProducts();
-    console.log(allProducts)
+    // console.log(allProducts)
     res.status(200).json(allProducts);
 }
 
@@ -23,11 +23,12 @@ const add = async (req, res) => {
 
 const edit = async (req, res) => {
     const db = req.app.get('db');
-    const { product_id } = req.params;
+    const product_id  = req.params.product_id;
     const { product_name, product_img, product_price, product_desc } = req.body;
+    console.log(req.params, req.body)
 
-    const updatedItem = await db.editProduct(product_id, product_name, product_img, product_price, product_desc);
-    res.status(200).json(updatedItem);
+    const updatedItems = await db.editProduct(product_id, product_name, product_img, product_price, product_desc);
+    res.status(200).json(updatedItems);
 }
 
 const deleteProduct = async (req, res) => {

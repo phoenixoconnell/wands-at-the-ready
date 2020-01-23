@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'lumos';
+    src: url('../../LUMOS.TTF') format('truetype'), url('../../LUMOS.woff') format('woff');
+}
+
+$font-stack: lumos;
+
+@mixin buttons {
+    button {
+        margin: 10px;
+        border-radius: 5px;
+        font: 100% $font-stack;
+        background-color: rgb(56, 34, 5);
+        border: 1px solid rgb(184, 155, 117);
+        color: rgb(184, 155, 117);
+    }
+
+    button:hover {
+        background-color: rgb(184, 155, 117);
+        border: 1px solid rgb(56, 34, 5);
+        color: rgb(56, 34, 5);
+    }
+}
+
+.cart-continue-button {
+    @include buttons();
+}
+
+.normal-text{
+    font-family: serif;
+}
+
+.cart-item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font: 100% $font-stack;
+}
+
+.cart-card-container {
+    border: 2px solid rgb(56, 34, 5);
+    background-color: rgb(184, 155, 117);
+    flex-direction: row;
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.cart-product-buttons {
+    @include buttons();
+}
+
+.cart-complete-button {
+    @include buttons();
+}

@@ -38,6 +38,7 @@ export function addProduct(product){
 }
 
 export function editProduct(product, product_id){
+    console.log(product_id)
     return {
         type: EDIT_PRODUCT,
         payload: axios.put(`/admin/edit/${product_id}`, product)
@@ -64,7 +65,7 @@ export default function reducer(state = initialState, action){
     const {type, payload} = action
     switch(type){
         case `${GET_PRODUCTS}_FULFILLED`:
-            console.log('products: ', payload.data)
+            // console.log('products: ', payload.data)
             return {
                 ...state,
                 products: payload.data
@@ -79,10 +80,16 @@ export default function reducer(state = initialState, action){
                 ...state,
                 products: payload.data
             }
+        case `${EDIT_PRODUCT}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            }
         case `${EDIT_PRODUCT}_FULFILLED`:
             return {
                 ...state,
-                products: payload.data
+                products: payload.data,
+                loading: false
             }    
         case `${DELETE_PRODUCT}_FULFILLED`:
             return {

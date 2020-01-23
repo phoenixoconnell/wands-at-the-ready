@@ -9,6 +9,7 @@ $font-stack: lumos;
         button {
             display: flex;
             align-items: center;
+            margin: 10px;
             border-radius: 5px;
             font: 100% $font-stack;
             font-size: 20px;
@@ -34,6 +35,8 @@ $font-stack: lumos;
     display: flex;
     flex-wrap: wrap;
     font: 100% $font-stack;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .normal-text {

@@ -1,4 +1,79 @@
-.cart-item-container {
-    display: flex;
-    flex-wrap: wrap;
+@font-face {
+  font-family: 'lumos';
+  src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
 }
+
+.cart-continue-button button {
+  margin: 10px;
+  border-radius: 5px;
+  font: 100% lumos;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.cart-continue-button button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
+}
+
+.normal-text {
+  font-family: serif;
+}
+
+.cart-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font: 100% lumos;
+}
+
+.cart-card-container {
+  border: 2px solid #382205;
+  background-color: #b89b75;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 300px;
+  height: 350px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.cart-product-buttons button {
+  margin: 10px;
+  border-radius: 5px;
+  font: 100% lumos;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.cart-product-buttons button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
+}
+
+.cart-complete-button button {
+  margin: 10px;
+  border-radius: 5px;
+  font: 100% lumos;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.cart-complete-button button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
+}
+/*# sourceMappingURL=Cart.css.map */

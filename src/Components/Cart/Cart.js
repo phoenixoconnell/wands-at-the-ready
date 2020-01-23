@@ -18,29 +18,33 @@ class Cart extends Component {
     render() {
         return (
             <div>
-                <Link to='/dashboard'><button>Continue Shopping</button></Link>
+                <div className='cart-continue-button'>
+                    <Link to='/dashboard'><button>Continue Shopping</button></Link>
+                </div>
                 <div className='cart-item-container'>
                 {this.props.cart.map((e, i) => {
                     return (
-                        <div key={`${e.product_id}-${i}`} className='card-container'>
+                        <div key={`${e.product_id}-${i}`} className='cart-card-container'>
                             <div>
                                 <div className='product-image'>
                                     <img src={e.product_img} alt='Product Image' style={{maxWidth: '200px'}} />
                                 </div>
                                 <div className='product-info'>
                                     <span>{e.product_name}</span>
-                                    <span>{`$${e.product_price}`}</span>
+                                    <span><span className='normal-text'>$</span>{`${e.product_price}`}</span>
                                     <span>{e.product_desc}</span>
                                 </div>
                             </div>
-                            <div className='product-buttons'>
-                                <button onClick={() => this.props.removeFromCart(e.product_id)}>Remove From Cart</button>
+                            <div className='cart-product-buttons'>
+                                <button className='cart-product-button' onClick={() => this.props.removeFromCart(e.product_id)}>Remove From Cart</button>
                             </div>
                         </div>
                     )
                 })}
                 </div>
-                <Link to='/dashboard'><button onClick={this.completePurchase}>{`Complete Your Purchase ($${this.props.cart.reduce((t, e) => t += e.product_price, 0)})`}</button></Link>
+                <div className='cart-complete-button'>
+                    <Link to='/dashboard'><button onClick={this.completePurchase}>Complete Your Purchase (<span className='normal-text'>$</span>{`${this.props.cart.reduce((t, e) => t += e.product_price, 0)})`}</button></Link>
+                </div>
             </div>
         )
     }

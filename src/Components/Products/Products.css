@@ -10,6 +10,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 10px;
   border-radius: 5px;
   font: 100% lumos;
   font-size: 20px;
@@ -44,6 +45,12 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   font: 100% lumos;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .normal-text {

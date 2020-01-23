@@ -21,9 +21,10 @@ class Edit extends Component {
         this.props.getProduct(this.props.match.params.product_id)
     }
 
-    componentDidUpdate() {
+    componentDidUpdate(prevProps) {
         console.log('setting')
         if(!this.state.loaded && this.props.product.product_id) {
+            console.log(this.props.product)
             this.setState({
                 product_name: this.props.product.product_name,
                 product_img: this.props.product.product_img,
@@ -32,6 +33,15 @@ class Edit extends Component {
                 loaded: true
             })
         }
+        // if(!this.props.loading && prevProps.product != this.props.product) {
+        //     this.setState({
+        //         product_name: this.props.product.product_name,
+        //         product_img: this.props.product.product_img,
+        //         product_price: this.props.product.product_price,
+        //         product_desc: this.props.product.product_desc,
+        //         loaded: true
+        //     })
+
     }
 
     handleInputChange = e => {
@@ -55,7 +65,7 @@ class Edit extends Component {
                 <input name='product_price' onChange={this.handleInputChange} value={this.state.product_price} />
                 <input name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
                 <div>
-                    <Link to='/dashboard'><button onClick={() => this.props.editProduct(product)}>Edit Product</button></Link>
+                    <Link to='/dashboard'><button onClick={() => this.props.editProduct(product, this.props.product.product_id)}>Edit Product</button></Link>
                     <Link to='/dashboard'><button>Cancel</button></Link>
                 </div>
             </div>
@@ -64,7 +74,8 @@ class Edit extends Component {
 }
 
 const mapStateToProps = reduxState => ({
-    product: reduxState.productReducer.product
+    product: reduxState.productReducer.product,
+    loading: false
 })
 
 export default connect(mapStateToProps, {
