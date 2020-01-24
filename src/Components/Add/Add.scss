@@ -26,7 +26,7 @@ $font-stack: lumos;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 500px;
+    align-items: center;
     font: 100% $font-stack;
     margin: auto;
     border: 2px solid rgb(56, 34, 5);
@@ -57,12 +57,24 @@ $font-stack: lumos;
     }
 }
 
+.selected-image {
+    height: 180px;
+    width: 180px;
+    margin-bottom: 10px;
+}
+
 .add-inputs {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    width: 98%;
+    align-items: center;
+        
+        input {
+            width: 90%;
+        }
 }
 
 .add-desc-input {
-    line-height: 100px;
+    width: 90%;
 }

@@ -67,10 +67,11 @@ class Add extends Component {
             <div className='add-container'>
                 <h1>Add New Product</h1>
                 <div className='add-inputs'>
-                    <input name='product_name' placeholder='Product Name' onChange={this.handleInputChange} />
-                    <input name='product_img' placeholder='Product Image' onChange={this.handleInputChange} />
-                    <input name='product_price' placeholder='Product Price' onChange={this.handleInputChange} />
-                    <input className='add-desc-input' name='product_desc' placeholder='Product Description' onChange={this.handleInputChange} />
+                    {this.state.product_img ? <img src={this.state.product_img} className='selected-image' alt='Selected Image' /> : null}
+                    <input name='product_name' placeholder='Product Name' value={this.state.product_name} onChange={this.handleInputChange} />
+                    <input type='hidden' name='product_img' placeholder='Product Image' value={this.state.product_img} />
+                    <input name='product_price' placeholder='Product Price' value={this.state.product_price} onChange={this.handleInputChange} />
+                    <textarea rows='6' columns='40' className='add-desc-input' name='product_desc' placeholder='Product Description' value={this.state.product_desc} onChange={this.handleInputChange} />
                 </div>
                 <div>
                     <button onClick={() => widget.open()}>Select Image</button>

@@ -3,6 +3,21 @@
   src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
 }
 
+.product-back-button button {
+  margin: 10px;
+  border-radius: 5px;
+  font: 100% lumos;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.product-back-button button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
+}
+
 .product-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11,14 +26,25 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border: 2px solid #382205;
+  background-color: #b89b75;
+  border-radius: 10px;
   font: 100% lumos;
+  font-size: larger;
+  font-weight: bold;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 700px;
 }
 
 .normal-text {
@@ -35,9 +61,9 @@
 }
 
 .product-buttons button {
-  font: 100% lumos;
-  font-size: large;
+  margin: 10px;
   border-radius: 5px;
+  font: 100% lumos;
   background-color: #382205;
   border: 1px solid #b89b75;
   color: #b89b75;

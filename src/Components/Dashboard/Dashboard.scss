@@ -16,6 +16,7 @@ $font-stack: lumos;
     margin: 0px;
     padding: 0px;
     overflow-y: scroll;
+    padding-top: 125px;
 }
 
 .dashboard-nav-container {
@@ -27,6 +28,9 @@ $font-stack: lumos;
     padding: 0px 10px 0px;
     width: 100%;
     box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    left: 0px;
 
         button {
             font: 100% $font-stack;

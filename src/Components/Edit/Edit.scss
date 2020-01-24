@@ -26,7 +26,7 @@ $font-stack: lumos;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 500px;
+    align-items: center;
     font: 100% $font-stack;
     margin: auto;
     border: 2px solid rgb(56, 34, 5);
@@ -37,27 +37,25 @@ $font-stack: lumos;
     margin-top: 20px;
     
     h1 {
-        font-size: large;
+        font-size: larger;
+        font-weight: bold;
     }
 
-    button {
-        margin: 10px;
-        border-radius: 5px;
-        font: 100% $font-stack;
-        background-color: rgb(56, 34, 5);
-        border: 1px solid rgb(184, 155, 117);
-        color: rgb(184, 155, 117);
-    }
-
-    button:hover {
-        background-color: rgb(184, 155, 117);
-        border: 1px solid rgb(56, 34, 5);
-        color: rgb(56, 34, 5);
-    }
+    @include buttons;
 }
 
 .edit-inputs {
     display: flex;
     flex-direction: column;
     margin: 10px;
+    align-items: center;
+    width: 100%;
+
+        input {
+            width: 90%;
+        }
+}
+
+.edit-desc-input {
+    width: 90%;
 }

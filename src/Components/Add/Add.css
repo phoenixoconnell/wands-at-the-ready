@@ -14,7 +14,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 500px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font: 100% lumos;
   margin: auto;
   border: 2px solid #382205;
@@ -45,6 +47,12 @@
   color: #382205;
 }
 
+.selected-image {
+  height: 180px;
+  width: 180px;
+  margin-bottom: 10px;
+}
+
 .add-inputs {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,9 +62,17 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin: 10px;
+  width: 98%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.add-inputs input {
+  width: 90%;
 }
 
 .add-desc-input {
-  line-height: 100px;
+  width: 90%;
 }
 /*# sourceMappingURL=Add.css.map */

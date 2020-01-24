@@ -11,9 +11,11 @@ class Product extends Component {
     render() {
         return (
             <div className='product-container'>
-                <Link to='/dashboard'><button className='back-button'>Back</button></Link>
+                <div className='product-back-button'>
+                    <Link to='/dashboard'><button className='back-button'>Back</button></Link>
+                </div>
                 <span>{this.props.product.product_name}</span>
-                <img src={this.props.product.product_img} alt='Product Image' style={{maxWidth: '400px'}}/>
+                <img src={this.props.product.product_img} alt='Product Image' style={{maxWidth: '300px'}}/>
                 <span><span className='normal-text'>$</span>{`${this.props.product.product_price}`}</span>
                 <span>{this.props.product.product_desc}</span>
                 <div className='product-buttons'>

@@ -5,38 +5,54 @@
 
 $font-stack: lumos;
 
+@mixin buttons {
+    button {
+        margin: 10px;
+        border-radius: 5px;
+        font: 100% $font-stack;
+        background-color: rgb(56, 34, 5);
+        border: 1px solid rgb(184, 155, 117);
+        color: rgb(184, 155, 117);
+    }
+
+    button:hover {
+        background-color: rgb(184, 155, 117);
+        border: 1px solid rgb(56, 34, 5);
+        color: rgb(56, 34, 5);
+    }
+}
+
+.product-back-button {
+    @include buttons();
+}
+
 .product-container{
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    border: 2px solid rgb(56, 34, 5);
+    background-color: rgb(184, 155, 117);
+    border-radius: 10px;
     font: 100% $font-stack;
+    font-size: larger;
+    font-weight: bold;
     box-sizing: border-box;
-    margin: 0px;
-    padding: 0px;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 500px;
+    height: 700px;
 }
 
 .normal-text{
     font-family: serif;
 }
 
-.product-buttons{
+.product-buttons {
     display: flex;
     justify-content: space-around;
     width: 40%;
 
-        button {
-            font: 100% $font-stack;
-            font-size: large; 
-            border-radius: 5px;
-            background-color: rgb(56, 34, 5);
-            border: 1px solid rgb(184, 155, 117);
-            color: rgb(184, 155, 117);
-        }
-
-        button:hover {
-            background-color: rgb(184, 155, 117);
-            border: 1px solid rgb(56, 34, 5);
-            color: rgb(56, 34, 5);
-        }
+    @include buttons();
 }
-

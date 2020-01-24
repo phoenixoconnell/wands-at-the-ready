@@ -73,10 +73,11 @@ class Edit extends Component {
             <div className='edit-container'>
                 <h1>Edit Product</h1>
                 <div className='edit-inputs'>
+                    <img className='selected-image' src={this.state.product_img} />
                     <input name='product_name' onChange={this.handleInputChange} value={this.state.product_name} />
-                    <input name='product_img' onChange={this.handleInputChange} value={this.state.product_img} />
+                    <input type='hidden' name='product_img' onChange={this.handleInputChange} value={this.state.product_img} />
                     <input name='product_price' onChange={this.handleInputChange} value={this.state.product_price} />
-                    <input name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
+                    <textarea rows='6' columns='40' className='edit-desc-input' name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
                 </div>
                 <div>
                     <button onClick={() => widget.open()}>Select Image</button>
