@@ -22,7 +22,7 @@ $font-stack: lumos;
     }
 }
 
-.add-container {
+.edit-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,8 +37,7 @@ $font-stack: lumos;
     margin-top: 20px;
     
     h1 {
-        font-size: larger;
-        font-weight: bold;
+        font-size: large;
     }
 
     button {
@@ -57,12 +56,8 @@ $font-stack: lumos;
     }
 }
 
-.add-inputs {
+.edit-inputs {
     display: flex;
     flex-direction: column;
     margin: 10px;
-}
-
-.add-desc-input {
-    line-height: 100px;
 }

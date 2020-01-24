@@ -70,12 +70,14 @@ class Edit extends Component {
                     })
         }
         return (
-            <div>
+            <div className='edit-container'>
                 <h1>Edit Product</h1>
-                <input name='product_name' onChange={this.handleInputChange} value={this.state.product_name} />
-                <input name='product_img' onChange={this.handleInputChange} value={this.state.product_img} />
-                <input name='product_price' onChange={this.handleInputChange} value={this.state.product_price} />
-                <input name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
+                <div className='edit-inputs'>
+                    <input name='product_name' onChange={this.handleInputChange} value={this.state.product_name} />
+                    <input name='product_img' onChange={this.handleInputChange} value={this.state.product_img} />
+                    <input name='product_price' onChange={this.handleInputChange} value={this.state.product_price} />
+                    <input name='product_desc' onChange={this.handleInputChange} value={this.state.product_desc} />
+                </div>
                 <div>
                     <button onClick={() => widget.open()}>Select Image</button>
                 </div>

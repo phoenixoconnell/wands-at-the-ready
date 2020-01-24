@@ -66,10 +66,12 @@ class Add extends Component {
         return (
             <div className='add-container'>
                 <h1>Add New Product</h1>
-                <input name='product_name' placeholder='Product Name' onChange={this.handleInputChange} />
-                <input name='product_img' placeholder='Product Image' onChange={this.handleInputChange} />
-                <input name='product_price' placeholder='Product Price' onChange={this.handleInputChange} />
-                <input name='product_desc' placeholder='Product Description' onChange={this.handleInputChange} />
+                <div className='add-inputs'>
+                    <input name='product_name' placeholder='Product Name' onChange={this.handleInputChange} />
+                    <input name='product_img' placeholder='Product Image' onChange={this.handleInputChange} />
+                    <input name='product_price' placeholder='Product Price' onChange={this.handleInputChange} />
+                    <input className='add-desc-input' name='product_desc' placeholder='Product Description' onChange={this.handleInputChange} />
+                </div>
                 <div>
                     <button onClick={() => widget.open()}>Select Image</button>
                 </div>

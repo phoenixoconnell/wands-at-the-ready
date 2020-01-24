@@ -17,5 +17,46 @@
   width: 500px;
   font: 100% lumos;
   margin: auto;
+  border: 2px solid #382205;
+  background-color: #b89b75;
+  width: 400px;
+  height: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.add-container h1 {
+  font-size: larger;
+  font-weight: bold;
+}
+
+.add-container button {
+  margin: 10px;
+  border-radius: 5px;
+  font: 100% lumos;
+  background-color: #382205;
+  border: 1px solid #b89b75;
+  color: #b89b75;
+}
+
+.add-container button:hover {
+  background-color: #b89b75;
+  border: 1px solid #382205;
+  color: #382205;
+}
+
+.add-inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10px;
+}
+
+.add-desc-input {
+  line-height: 100px;
 }
 /*# sourceMappingURL=Add.css.map */
