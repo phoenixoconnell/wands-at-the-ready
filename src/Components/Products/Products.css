@@ -3,7 +3,7 @@
   src: url("../../LUMOS.TTF") format("truetype"), url("../../LUMOS.woff") format("woff");
 }
 
-.products-add-button button {
+.products-add-button button, .products-buttons button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,7 +19,7 @@
   color: #b89b75;
 }
 
-.products-add-button button:hover {
+.products-add-button button:hover, .products-buttons button:hover {
   background-color: #b89b75;
   border: 1px solid #b89b75;
   color: #382205;
@@ -107,20 +107,5 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 100%;
-}
-
-.products-buttons button {
-  margin: 10px;
-  border-radius: 5px;
-  font: 100% lumos;
-  background-color: #382205;
-  border: 1px solid #b89b75;
-  color: #b89b75;
-}
-
-.products-buttons button:hover {
-  background-color: #b89b75;
-  border: 1px solid #382205;
-  color: #382205;
 }
 /*# sourceMappingURL=Products.css.map */

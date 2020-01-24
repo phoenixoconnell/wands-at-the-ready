@@ -5,24 +5,28 @@
 
 $font-stack: lumos;
 
-.products-add-button {
-        button {
-            display: flex;
-            align-items: center;
-            margin: 10px;
-            border-radius: 5px;
-            font: 100% $font-stack;
-            font-size: 20px;
-            background-color: rgb(56, 34, 5);
-            border: 1px solid rgb(184, 155, 117);
-            color: rgb(184, 155, 117);
-        }
+%buttons {
+    button {
+        display: flex;
+        align-items: center;
+        margin: 10px;
+        border-radius: 5px;
+        font: 100% $font-stack;
+        font-size: 20px;
+        background-color: rgb(56, 34, 5);
+        border: 1px solid rgb(184, 155, 117);
+        color: rgb(184, 155, 117);
+    }
 
-        button:hover {
-            background-color: rgb(184, 155, 117);
-            border: 1px solid rgb(184, 155, 117);
-            color: rgb(56, 34, 5);
-        }
+    button:hover {
+        background-color: rgb(184, 155, 117);
+        border: 1px solid rgb(184, 155, 117);
+        color: rgb(56, 34, 5);
+    }
+}
+
+.products-add-button {
+    @extend %buttons;
 }
 
 .products-container {
@@ -73,18 +77,5 @@ $font-stack: lumos;
     justify-content: space-around;
     width: 100%;
 
-        button {
-            margin: 10px;
-            border-radius: 5px;
-            font: 100% $font-stack;
-            background-color: rgb(56, 34, 5);
-            border: 1px solid rgb(184, 155, 117);
-            color: rgb(184, 155, 117);
-        }
-
-        button:hover {
-            background-color: rgb(184, 155, 117);
-            border: 1px solid rgb(56, 34, 5);
-            color: rgb(56, 34, 5);
-        }
+    @extend %buttons;
 }

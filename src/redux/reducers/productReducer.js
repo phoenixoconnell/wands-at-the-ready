@@ -70,10 +70,16 @@ export default function reducer(state = initialState, action){
                 ...state,
                 products: payload.data
             }
+        case `${GET_PRODUCT}_PENDING`:
+            return {
+                ...state,
+                loading: true
+            }
         case `${GET_PRODUCT}_FULFILLED`:
             return {
                 ...state,
-                product: payload.data
+                product: payload.data,
+                loading: false
             }
         case `${ADD_PRODUCT}_FULFILLED`:
             return {
