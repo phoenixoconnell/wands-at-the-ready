@@ -18,6 +18,14 @@
   color: #382205;
 }
 
+a:link {
+  color: #382205;
+}
+
+a:visited {
+  color: #382205;
+}
+
 .product-container {
   display: -webkit-box;
   display: -ms-flexbox;

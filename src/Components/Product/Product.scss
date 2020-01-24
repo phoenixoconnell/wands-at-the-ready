@@ -26,6 +26,14 @@ $font-stack: lumos;
     @include buttons();
 }
 
+a:link {
+    color: rgb(56, 34, 5);
+}
+
+a:visited {
+    color: rgb(56, 34, 5);
+  }
+
 .product-container{
     display: flex;
     flex-direction: column;
