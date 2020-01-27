@@ -82,4 +82,10 @@ a:visited {
   border: 1px solid #382205;
   color: #382205;
 }
+
+@media (max-width: 500px) {
+  .product-container {
+    width: 350px;
+  }
+}
 /*# sourceMappingURL=Product.css.map */

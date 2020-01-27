@@ -45,4 +45,47 @@
   font-size: 30px;
   border-radius: 5px;
 }
+
+.dashboard-nav-container img {
+  width: 600px;
+}
+
+@media (max-width: 750px) {
+  .dashboard-nav-container button {
+    font-size: 20px;
+  }
+  .dashboard-nav-container img {
+    width: 450px;
+  }
+}
+
+@media (max-width: 560px) {
+  .dashboard-nav-container button {
+    font-size: 20px;
+  }
+  .dashboard-nav-container img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 515px) {
+  .dashboard-nav-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .dashboard-nav-container button {
+    font-size: 15px;
+  }
+  .dashboard-nav-container img {
+    width: 350px;
+  }
+}
 /*# sourceMappingURL=Dashboard.css.map */

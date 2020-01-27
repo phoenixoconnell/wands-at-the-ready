@@ -8,6 +8,7 @@
   width: 100%;
   background-image: url("../../diagonalley.jpg");
   background-size: cover;
+  background-position: center;
 }
 
 .landing-input {
@@ -35,5 +36,35 @@
   border-radius: 5px;
   font: 100% lumos;
   margin: 5px;
+}
+
+@media (max-width: 1300px) {
+  .landing-logo img {
+    width: 900px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .landing-logo img {
+    width: 700px;
+  }
+}
+
+@media (max-width: 850px) {
+  .landing-logo img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .landing-logo img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .landing-logo img {
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=Landing.css.map */

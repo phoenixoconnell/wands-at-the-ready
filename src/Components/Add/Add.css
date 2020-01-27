@@ -76,4 +76,10 @@
 .add-desc-input {
   width: 90%;
 }
+
+@media (max-width: 450px) {
+  .add-container {
+    width: 350px;
+  }
+}
 /*# sourceMappingURL=Add.css.map */

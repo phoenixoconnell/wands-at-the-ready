@@ -38,4 +38,48 @@ $font-stack: lumos;
             font-size: 30px;
             border-radius: 5px;
         }
+
+        img {
+            width: 600px;
+        }
+}
+
+@media (max-width: 750px) {
+    .dashboard-nav-container {
+        button {
+            font-size: 20px;
+        }
+
+        img {
+            width: 450px;
+        }
+    }
+}
+
+@media (max-width: 560px) {
+    .dashboard-nav-container {
+        button {
+            font-size: 20px;
+        }
+
+        img {
+            width: 400px;
+        }
+    }
+}
+
+@media (max-width: 515px) {
+    .dashboard-nav-container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        button {
+            font-size: 15px;
+        }
+
+        img {
+            width: 350px;
+        }
+    }
 }

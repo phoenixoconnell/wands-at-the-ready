@@ -39,7 +39,9 @@ class Dashboard extends Component {
         return (
             <div className='dashboard-main-container'>
                 <section className='dashboard-nav-container'>
-                    <img src={logo} alt='Wands at the Ready' style={{maxWidth: '600px'}} />
+                    <div>
+                        <img src={logo} alt='Wands at the Ready' />
+                    </div>
                     <div>
                         <Link to='/'><button onClick={this.props.logout}>Logout</button></Link>
                         <Link to='/dashboard/cart'><button><i class="fas fa-shopping-cart"></i>({this.props.cart ? this.props.cart.length : 0})</button></Link>

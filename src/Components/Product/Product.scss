@@ -64,3 +64,9 @@ a:visited {
 
     @include buttons();
 }
+
+@media (max-width: 500px) {
+    .product-container {
+        width: 350px;
+    }
+}

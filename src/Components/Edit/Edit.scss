@@ -60,3 +60,9 @@ $font-stack: lumos;
 .edit-desc-input {
     width: 90%;
 }
+
+@media (max-width: 450px) {
+    .edit-container {
+        width: 350px;
+    }
+}

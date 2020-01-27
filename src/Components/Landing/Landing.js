@@ -51,7 +51,7 @@ class Landing extends Component {
         }
         return (
             <div className='landing-container'>
-                <section>
+                <section className='landing-logo'>
                     <img src={logo} alt='Wands at the Ready!'/>
                 </section>
                 <div className='landing-input'>
