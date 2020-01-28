@@ -8,7 +8,6 @@ import './Products.css';
 class Products extends Component {
 
     add = product_id => {
-        console.log('This is the product id', product_id)
         this.props.addToCart(product_id)
     }
 
@@ -36,7 +35,6 @@ class Products extends Component {
                                 <div className='product-info'>
                                     <span>{e.product_name}</span>
                                     <span><span className='normal-text'>$</span>{`${e.product_price}`}</span>
-                                    {/* <span>{e.product_desc}</span> */}
                                 </div>
                             </div>
                             </Link>
