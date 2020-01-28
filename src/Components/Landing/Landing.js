@@ -39,6 +39,16 @@ class Landing extends Component {
         }
     }
 
+    registerLocal = user => {
+        const { username, password, isAdmin } = this.state
+        this.setState({
+            username: '',
+            password: '',
+            isAdmin: false
+        })
+        this.props.register({ username, password, isAdmin })
+    }
+
     render() {
         let auth = {
             username: this.state.username,
@@ -55,15 +65,15 @@ class Landing extends Component {
                     <img src={logo} alt='Wands at the Ready!'/>
                 </section>
                 <div className='landing-input'>
-                    <input name='username' placeholder='Username' onChange={this.handleInputChange}></input>
-                    <input type='password' name='password' placeholder='Password' onChange={this.handleInputChange}></input>
+                    <input name='username' placeholder='Username' onChange={this.handleInputChange} value={this.state.username}></input>
+                    <input type='password' name='password' placeholder='Password' onChange={this.handleInputChange} value={this.state.password}></input>
                 </div>
                 <div className='landing-admin'>
-                    Admin<input type='checkbox' onChange={this.handleBoxClick} />
+                    Admin<input type='checkbox' onChange={this.handleBoxClick} value={this.state.isAdmin} />
                 </div>
                 <div className='landing-buttons'>
                     <Link to='/dashboard'><button onClick={() => this.props.login(auth)}>Login</button></Link>
-                    <button onClick={() => this.props.register(register)}>Register</button>
+                    <button onClick={() => this.registerLocal(register)}>Register</button>
                 </div>
             </div>
         )
